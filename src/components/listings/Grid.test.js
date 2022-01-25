@@ -19,3 +19,18 @@ test('There is a JS in this title', () => {
 test('The title contains React', () => {
     expect(dataTest).toContain('React');
 });
+
+const data2 = ['React', 'React Native'];
+
+test('The list of courses contains React Native and React', () => {
+    //expect(data2).toEqual(expect.arrayContaining(data2));
+    expect(['React', 'React Native', 'MeteorJS']).toEqual(expect.arrayContaining(data2));
+});
+
+test('The first course to have a property title', () => {
+    expect(data[0]).toHaveProperty('title');
+});
+
+test('The first course to have a property title and value of 31,266', () => {
+    expect(data[0]).toHaveProperty('title', '31,266');
+});
